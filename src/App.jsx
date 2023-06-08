@@ -9,7 +9,20 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <React.Suspense fallback={<div>...Loading</div>}>
+      <React.Suspense
+        fallback={
+          <div
+            style={{
+              fontSize: "60px",
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+            }}
+          >
+            ...Loading
+          </div>
+        }
+      >
         <ProductPage />
       </React.Suspense>
     ),
